@@ -122,19 +122,21 @@
         </div>
       </div>
     </section>
-
+    
     <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact__container bd-grid">
-        <form action="#" class="contact__form">
-          <input type="text" placeholder="Name" class="contact__input" />
-          <input type="email" placeholder="Email" class="contact__input" />
-          <textarea placeholder="Message" class="contact__input"></textarea>
-          <input type="submit" value="Send" class="contact__button button" />
-        </form>
-      </div>
-    </section>
+  <section class="contact section" id="contact">  
+    <h2 class="section-title">Contact</h2>
+    <div class="contact__container bd-grid">
+      <form action="https://formsubmit.co/aman.gupta7079@gmail.com" method="POST" class="contact__form">
+        <input type="text" name="name" placeholder="Your Name" class="contact__input" required />
+      <input type="email" name="email" placeholder="Your Email" class="contact__input" required />
+      <textarea name="message" placeholder="Your Message" class="contact__input" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://thankyoupage.com/"> <!-- replace with your own page if needed -->
+        <input type="submit" value="Send" class="contact__button button" />
+      </form>
+    </div>
+  </section>
   </main>
 
   <!--===== FOOTER =====-->
