@@ -255,62 +255,70 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== SKILLS =====*/
-.skills__container {
-  row-gap: 2rem;
-  text-align: center;
-}
-.skills__subtitle {
-  margin-bottom: var(--mb-2);
-  color: #ffffff;
-}
-.skills__text {
-  margin-bottom: var(--mb-4);
-  color: #ffffff;
-}
+/* ===== IMPROVED SKILLS SECTION =====*/
 .skills__data {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  font-weight: var(--font-semi);
-  padding: 0.5rem 1rem;
-  margin-bottom: var(--mb-4);
-  border-radius: 0.5rem;
-  background: rgba(255,255,255,0.05); /* translucent card look */
+  overflow: hidden;
+  transition: 0.3s;
 }
-.skills__icon {
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
+
+.skills__data:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
+
 .skills__names {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
 }
+
+.skills__icon {
+  font-size: 1.8rem;
+  color: var(--first-color);
+}
+
+.skills__name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.skills__percentage {
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1;
+}
+
+/* Progress Bars */
 .skills__bar {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--first-color);
-  height: 0.25rem;
+  height: 0.3rem;
+  background: linear-gradient(90deg, var(--first-color), #00d4ff);
   border-radius: 0.5rem;
-  z-index: var(--z-back);
+  width: 0;
+  transition: width 1.2s ease-in-out;
 }
-.skills__html {
-  width: 95%;
-}
-.skills__css {
-  width: 85%;
-}
-.skills__js {
-  width: 65%;
-}
-.skills__ux {
-  width: 85%;
-}
+
+/* Individual Progress Widths */
+.skills__cpp.active { width: 90%; }
+.skills__java.active { width: 90%; }
+.skills__spring.active { width: 88%; }
+.skills__frontend.active { width: 80%; }
+.skills__backend.active { width: 80%; }
+
 .skills__img {
+  width: 90%;
   border-radius: 0.5rem;
+  justify-self: center;
+  opacity: 0.9;
 }
 
 /* ===== WORK =====*/
@@ -489,3 +497,4 @@ img {
     width: 450px;
   }
 }
+
