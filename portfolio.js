@@ -11,6 +11,23 @@ const showMenu = (toggleId, navId) => {
 }
 showMenu('nav-toggle','nav-menu')
 
+
+<script>
+  const skillBars = document.querySelectorAll('.skills__bar');
+
+  const showBars = () => {
+    skillBars.forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        bar.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', showBars);
+  window.addEventListener('load', showBars);
+</script>
+ 
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -53,4 +70,5 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text', {}) 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img', { delay: 400 }) 
 sr.reveal('.home__social-icon', { interval: 200 }) 
+
 sr.reveal('.skills__data, .contact__input', { interval: 200 }) 
